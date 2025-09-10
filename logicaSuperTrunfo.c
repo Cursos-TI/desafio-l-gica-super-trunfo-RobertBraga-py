@@ -30,6 +30,8 @@ int main() {
     float densidade2;
     float PPC2;
     float superpoder2;
+
+    int AtributoEscolhido;
   
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -83,6 +85,78 @@ int main() {
     densidade2 = populacao2 / area2;
     PPC2 = pib2 / populacao2;
 
+    printf("Esolha do atributo\n");
+    printf("1. população\n");
+    printf("2. área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos turisticos\n");
+    printf("5. Densidade demográfica\n");
+    printf("Escolha: ");
+    scanf("%d", &AtributoEscolhido);
+
+    switch (AtributoEscolhido)
+    {
+    case 1:
+        printf("Você escolheu população\n");
+        if (populacao1 > populacao2){
+        printf("%s VENCEU\n", cidade1);
+        printf ("%s tem uma população de %ld habitantes, que é maior que %s que tem %d habitantes.\n", cidade1, populacao1, cidade2, populacao2); 
+        } else {
+        printf("%s VENCEU\n", cidade2);
+        printf ("%s tem uma população de %ld habitantes, que é maior que %s que tem %d habitantes.\n", cidade2, populacao2, cidade1, populacao1);
+        }
+        
+        break;
+    case 2:
+        printf("Você escolheu Área\n");
+        if (area1 > area2){
+        printf("%s VENCEU\n", cidade1);
+        printf("%s tem uma área de %.f km², que é maior que %s, que possui uma área de %d km².", cidade1, area1, cidade2, area2);
+        } else {
+        printf("%s VENCEU\n", cidade2);
+        printf ("%s tem uma área de %.f km², que é maior que %s, que possui uma área de %d km².", cidade2, area2, cidade1, area1);
+        }
+        break;
+
+    case 3:
+        printf("Você escolheu PIB\n");
+        if (pib1 > pib2){
+        printf("%s VENCEU\n", cidade1);
+        printf("%s tem um PIB de R$ %.2f, que é maior que %s, com um PIB de R$ %.2f.", cidade1, pib1, cidade2, pib2);    
+        } else {
+        printf("%s VENCEU\n", cidade2);
+        printf ("%s tem um PIB de R$ %.2f, que é maior que %s, com um PIB de R$ %.2f.", cidade2, pib2, cidade1, pib1);
+        }
+        break;
+
+    case 4:
+        printf("Você escolheu pontos turísticos\n");
+        if (turisticos1 > turisticos2){
+        printf("%s VENCEU\n", cidade1);
+        printf("%s tem %d pontos turísticos, que é maior que %s, que possui %d", cidade1, turisticos1, cidade2, turisticos2);
+        } else {
+        printf("%s VENCEU\n", cidade2);
+        printf ("%s tem %d pontos turísticos, que é maior que %s, que possui %d", cidade2, turisticos2, cidade1, turisticos1);
+        }
+        break;
+
+    case 5:
+        printf("Você escolheu densidade demográfica\n");
+        if (densidade1 < densidade2){
+        printf("%s VENCEU\n", cidade1);
+        printf("%s tem uma densidade demográfica de %.2f habitantes por km², que é menor que %s, com uma densidade de %.2f habitantes por km²", cidade1, densidade1, cidade2, densidade2);
+        } else {
+        printf("%s VENCEU\n", cidade2);
+        printf("%s tem uma densidade demográfica de %.2f habitantes por km², que é menor que %s, com uma densidade de %.2f habitantes por km²", cidade2, densidade2, cidade1, densidade1);
+        }
+        
+        break;
+    default:
+        printf("Escolha inválida!\n");
+        break;
+    }
+
+
 
     // Exemplo:
     // printf("Digite o código da cidade: ");
@@ -94,11 +168,6 @@ int main() {
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
-    if (turisticos1 > turisticos2){
-        printf("cidade 1 tem %d pontos turísticos, que é maior que a cidade 2, que possui %d!\n", turisticos1, turisticos2);
-    } else {
-        printf("cidade 2 tem %d pontos turísticos, que é maior que a cidade 1, que possui %d!\n", turisticos2, turisticos1);
-    }
 
     // Exemplo:
     // if (populacaoA > populacaoB) {

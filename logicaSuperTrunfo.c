@@ -95,9 +95,9 @@ int main() {
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
     if (turisticos1 > turisticos2){
-        printf("%s tem %d pontos turísticos, que é maior que %s, que possui %d!\n", cidade1 turisticos1, cidade2, turisticos2);
+        printf("cidade 1 tem %d pontos turísticos, que é maior que a cidade 2, que possui %d!\n", turisticos1, turisticos2);
     } else {
-        printf("%s tem %d pontos turísticos, que é maior que %s, que possui %d!\n", cidade2, turisticos2, cidade1, turisticos1);
+        printf("cidade 2 tem %d pontos turísticos, que é maior que a cidade 1, que possui %d!\n", turisticos2, turisticos1);
     }
 
     // Exemplo:
